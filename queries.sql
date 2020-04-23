@@ -6,8 +6,17 @@ FROM Customers
 WHERE postalcode= '1010';
 
 -- Find the phone number for the supplier with the id 11
+select phone
+from suppliers
+where supplierid = 11;
 
+
+-- BUG HERE
 -- List first 10 orders placed, sorted descending by the order date
+SELECT *
+FROM [Orders]
+ORDER BY OrderDate DESC
+-- ^ BUG HERE ^ - LIMIT NOT WORKING
 
 -- Find all customers that live in London, Madrid, or Brazil
 
